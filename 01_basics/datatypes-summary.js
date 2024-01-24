@@ -24,7 +24,7 @@
 const id = Symbol('123');
 const anotherId = Symbol('123');
 
-console.log(id === anotherId);
+// console.log(id === anotherId);
 
 
 const name = ["Vipin", "Ashu", "Anand"]
@@ -37,3 +37,34 @@ let myObj ={
 const  myfunction = function() {
     console.log("hello World")
 }
+
+
+/*
+
+************** Memory Allocation ***********
+
+Stack (Primitive),  Heap (None Premitive)
+
+
+*/
+
+
+let myName = "Vipin";
+
+let anotherName = myName;
+anotherName = "Ashu"
+
+console.log(anotherName);
+
+
+let userOne = {
+    email: "vipingoand99@gmail.com",
+    upi: "user@ybl"
+}
+
+
+let userTwo = userOne;
+userTwo.email = "vipingoand@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
