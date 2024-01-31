@@ -88,7 +88,7 @@ setInterval(() => {
 ```javascript
 
 let randomNumber = parseInt(Math.random() * 100 + 1);
-console.log(randomNumber);
+// console.log(randomNumber);
 
 const submit = document.querySelector('#subt');
 const userInput = document.querySelector('#guessField');
@@ -163,6 +163,7 @@ function newGame() {
     guessSlot.innerHTML = '';
     lastResult.innerHTML = `${11 - numGuess}`;
     userInput.removeAttribute('disabled');
+    submit.removeAttribute('disabled');
     startOver.removeChild(p);
     playGame = true;
   });
@@ -171,6 +172,7 @@ function newGame() {
 function endGame() {
   userInput.value = '';
   userInput.setAttribute('disabled', '');
+  submit.setAttribute('disabled', '');
   p.classList.add('button');
   p.innerHTML = `<h2 id="newGame">Start new Game</h2>`;
   startOver.appendChild(p);
