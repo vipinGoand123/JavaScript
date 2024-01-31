@@ -47,6 +47,7 @@ buttons.forEach((button) => {
 
 
 ```javascript
+
 const form = document.querySelector('form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -63,5 +64,19 @@ form.addEventListener('submit', (e) => {
     results.innerHTML = `<span>${bmi}</span>`;
   }
 });
+
+```
+
+
+## Project 3 Solution
+
+
+```javascript
+
+const clock = document.getElementById('clock');
+setInterval(() => {
+  let date = new Date();
+  clock.innerText = date.toLocaleTimeString();
+}, 1000);
 
 ```
